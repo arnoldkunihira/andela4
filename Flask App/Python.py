@@ -1,11 +1,16 @@
-from flask import Flask
+from flask import Flask, render_template
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path="/static")
 
 
 @app.route('/')
 def hello_world():
     return 'Hello World!'
+
+
+@app.route('/home')
+def login_view():
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
