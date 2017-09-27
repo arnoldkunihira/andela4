@@ -7,5 +7,5 @@ install:
   - pip install -r requirements.txt
 # command to run tests
 
-add script:
-  - coverage run --source=[test_recipes.py]
+script:
+  - pytest
